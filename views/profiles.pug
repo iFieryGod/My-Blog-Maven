@@ -1,0 +1,50 @@
+extends layout2
+
+block content
+ header#main-header.py-2.bg-primary.text-white
+      .container
+        .row
+          .col-md-6
+            h1
+              i.fa.fa-user
+              |  Edit Profile
+ section#actions.py-4.mb-4.bg-light
+      .container
+        .row
+          .col-md-3.mr-auto
+            a.btn.btn-primary.btn-light(href='/dashboard')
+              i.fa.fa-arrow-left
+              |  Back to Dashboard
+          .col-md-3.mr-auto
+            a.btn.btn-success.btn-block(href='#', data-toggle='modal', data-target='#passwordModal')
+              i.fa.fa-lock
+              |  Change Password
+          .col-md-3.mr-auto
+            a.btn.btn-danger.btn-block(href='#')
+              i.fa.fa-remove
+              |  Delete Account
+ section#profile.mb-3
+      .container
+        .row
+          .col-md-9
+            .card
+              .card-header
+                h4 Edit Profile
+              .card-body
+                form
+                  .form-group
+                    label(for='title') Name
+                    input.form-control(type='text', value='Goran')
+                  .form-group
+                    label(for='title') Email
+                    input.form-control(type='text', value='email@gmail.com')
+                  .form-group
+                    label(for='body') Bio
+                    textarea.form-control(name='editor1', style='visibility: hidden; display: none;')
+                      | Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel aliquam voluptatem quidem ullam rem aliquid. Doloribus saepe ab rem iste voluptate, iure repellat error dolorum non asperiores, nam laborum dolor?
+          .col-md-3
+            h3 Your Avatar
+            img.d-block.img-fluid.mb-3(src='./images/avatar.png', alt='avatar')
+            button.btn.btn-primary.btn-block Edit Image
+            button.btn.btn-danger.btn-block Delete Image
+ include partials/footer2

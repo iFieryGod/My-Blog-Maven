@@ -1,0 +1,36 @@
+extends layout2
+
+block content
+    header#main-header.py-2.bg-danger.text-white
+      .container
+        .row
+          .col-md-6
+            h1
+              i.fa.fa-folder
+              |  Categories
+    section#actions.py-4.bg-light
+      .container
+        .row
+          .col-md-6.ml-auto
+            .input-group
+              input.form-control(type='text', placeholder='Search')
+              span.input-group-btn
+                button.btn.btn-success Search
+    section#actions.py-4.mb-4.bg-light
+      .container
+        .row
+          .col
+            .card
+              .card-header
+                h4 Latest Categories
+              table.table.table-striped
+                thead.thead-dark
+                  tr
+                    th Categories
+                    th Date Posted
+                tbody
+                  each category in categories
+                    tr
+                      td= category.name
+                      td July 12, 2017
+    include partials/footer

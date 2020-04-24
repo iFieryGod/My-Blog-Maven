@@ -1,0 +1,51 @@
+extends layout2
+
+block content
+ header#main-header.py-2.bg-success.text-white
+      .container
+        .row
+          .col-md-6
+            h1
+              i.fa.fa-cog
+              |  Settings
+ section#actions.py-4.mb-4.bg-light
+      .container
+        .row
+          .col-md-3.mr-auto
+            a.btn.btn-primary.btn-light(href='/dashboard')
+              i.fa.fa-arrow.left
+              |  Back to Dashboard
+          .col-md-3.mr-auto
+            a.btn.btn-success.btn-block(href='#')
+              i.fa-fa-check
+              |  Save Changes
+ section#settings
+      .container
+        .row
+          .col
+            .card.my-2
+              .card-header
+                h4 Edit Settings
+              .card-body
+                form
+                  .form-group
+                    legend Allow User Registrations
+                    .form-check
+                      label.form-check-label
+                        input.form-check-input(type='radio', value='yes', checked='yes')
+                        | Yes
+                    .form-check
+                      label.form-check-label
+                        input.form-check-input(type='radio', value='no')
+                        | No
+                  .form-group
+                    legend Homepage Format
+                    .form-check
+                      label.form-check-label
+                        input.form-check-input(type='radio', value='posts', checkedyes='')
+                        | Post Index
+                    .form-check
+                      label.form-check-label
+                        input.form-check-input(type='radio', value='page')
+                        | Single Page
+ include partials/footer

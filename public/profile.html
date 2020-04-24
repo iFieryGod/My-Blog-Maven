@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/1946a965ff.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css" integrity="sha256-HAaDW5o2+LelybUhfuk0Zh2Vdk8Y2W2UeKmbaXhalfA=" crossorigin="anonymous" />
+  <link rel="stylesheet" href="css/style.css">
+  <title>Document</title>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <div class="container">
+      <img class="img-fluid" src="./images/Ice_Cream.png" alt="" width="50px" height="50px">
+      <a href="index.html" class="navbar-brand">YUM</a>
+      <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a href="blog-posts.html" class="nav-link">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a href="dashboard.html" class="nav-link">Dashboard</a>
+          </li>
+          <li class="nav-item">
+            <a href="posts.html" class="nav-link">Posts</a>
+          </li>
+          <li class="nav-item">
+            <a href="categories.html" class="nav-link">Categories</a>
+          </li>
+          <li class="nav-item">
+            <a href="users.html" class="nav-link">Users</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item dropdown mr-3">
+            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
+              <i class="fas fa-user"></i> Welcome Goran
+            </a>
+            <div class="dropdown-menu">
+              <a href="profile.html" class="dropdown-item"><i class="fas fa-user-circle"></i>Profile</a>
+              <a href="settings.html" class="dropdown-item"><i class="fas fa-cog"></i>Settings</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="login.html" class="nav-link">
+              <i class="fas fa-user-times"></i>Logout
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header id="main-header" class="py-2 bg-primary text-white">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h1><i class="fa fa-user"></i> Edit Profile</h1>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Section Profile -->
+  <section id="actions" class="py-4 mb-4 bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 mr-auto">
+          <a href="index.html" class="btn btn-primary btn-light">
+            <i class="fa fa-arrow-left"></i> Back to Dashboard
+          </a>
+        </div>
+        <div class="col-md-3 mr-auto">
+          <a href="#" class="btn btn-success btn-block" data-toggle="modal" data-target="#passwordModal">
+            <i class="fa fa-lock"></i> Change Password
+          </a>
+        </div>
+        <div class="col-md-3 mr-auto">
+          <a href="index.html" class="btn btn-danger btn-block">
+            <i class="fa fa-remove"></i> Delete Account
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Edit Your Profile -->
+<section id="profile">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-9">
+        <div class="card">
+          <div class="card-header">
+            <h4>Edit Profile</h4>
+          </div>
+          <div class="card-body">
+            <form>
+              <div class="form-group">
+                <label for="title">Name</label>
+                <input type="text" class="form-control" value="Goran">
+              </div>
+              <div class="form-group">
+                <label for="title">Email</label>
+                <input type="text" class="form-control" value="email@gmail.com">
+              </div>
+              <div class="form-group">
+                <label for="body">Bio</label>
+                <textarea name="editor1" style="visibility: hidden; display: none;" class="form-control">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel aliquam voluptatem quidem ullam rem aliquid. Doloribus saepe ab rem iste voluptate, iure repellat error dolorum non asperiores, nam laborum dolor?</textarea>
+
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <h3>Your Avatar</h3>
+        <img src="./images/avatar.png" alt="avatar" class="d-block img-fluid mb-3">
+        <button class="btn btn-primary btn-block">Edit Image</button>
+        <button class="btn btn-danger btn-block">Delete Image</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <footer id="main-footer" class="text-center p-4">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <p>Copyright &copy; <span id="year"></span> YUM FASHION</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js" integrity="sha256-Y1rRlwTzT5K5hhCBfAFWABD4cU13QGuRN6P5apfWzVs=" crossorigin="anonymous"></script>
+  <script src="https://cdn.ckeditor.com/4.14.0/standard/ckeditor.js"></script>
+  <script>
+    $('#year').text(new Date().getFullYear());
+    CKEDITOR.replace( 'editor1' );
+  </script>
+</body>
+</html>

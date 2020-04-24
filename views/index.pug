@@ -1,0 +1,89 @@
+extends layout1
+
+block content
+    section#showcase
+      #myCarousel.carousel.slide(data-ride='carousel')
+        ol.carousel-indicators
+          li.active(data-target='#myCarousel', data-slide-to='0')
+          li(data-target='#myCarousel', data-slide-to='1')
+          li(data-target='#myCarousel', data-slide-to='2')
+        .carousel-inner
+          .carousel-item.carousel-image-1.active
+            .container
+              .carousel-caption.d-none.d-sm-block.text-right.mb-5
+                h1.display-3 Heading One
+                p
+                  | Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa repellendus dolorem a laudantium eligendi itaque molestias iure porro nisi consequatur?
+                a.btn.btn-danger.btn-lg(href='/sign-up') Sign UP Now
+          .carousel-item.carousel-image-2
+            .container
+              .carousel-caption.d-none.d-sm-block.mb-5
+                h1.display-3 Heading Two
+                p
+                  | Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa repellendus dolorem a laudantium eligendi itaque molestias iure porro nisi consequatur?
+                a.btn.btn-primary.btn-lg(href='#') Learn More
+          .carousel-item.carousel-image-3
+            .container
+              .carousel-caption.d-none.d-sm-block.text-right.mb-5
+                h1.display-3 Heading Three
+                p
+                  | Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa repellendus dolorem a laudantium eligendi itaque molestias iure porro nisi consequatur?
+                a.btn.btn-success.btn-lg(href='#') Explore
+        a.carousel-control-prev(href='#myCarousel', data-slide='prev')
+          span.carousel-control-prev-icon
+        a.carousel-control-next(href='#myCarousel', data-slide='next')
+          span.carousel-control-next-icon
+    section#home-heading.p5
+      .dark-overlay
+        .row
+          .col
+            .container.pt-5
+              h1 Ready to get started
+              p.d-none.d-md-block
+                | Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse quam debitis fuga dolorem sapiente quibusdam. Minima animi voluptatum, ea laborum, deserunt exercitationem laudantium et beatae culpa, eius autem. Soluta iste placeat accusantium molestias molestiae rem perferendis eaque sint aspernatur, dolores pariatur maiores et doloribus adipisci, facilis praesentium nemo perspiciatis reprehenderit!
+              p
+                | Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit aliquam eveniet tempore ipsam rem quaerat quam totam. A, minima aperiam ratione corrupti alias nobis iusto laboriosam harum quas ad assumenda, ipsum asperiores. Deserunt at quod iste corrupti minus alias in.
+              p
+                | Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet dolorum quas cumque deleniti neque, excepturi beatae laboriosam. Rerum, et veniam.
+    section#info.py-3
+      .container
+        h1#post-heading.py-3 See the Latest Post
+        .row
+          .col-md-6.align-self-center
+            h3 lorem ipsum
+            p
+              | Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione obcaecati pariatur, cumque voluptate quis iste velit! A accusantium quibusdam nesciunt.
+            a.btn.btn-danger.btn-lg.my-1(href='#') Learn More
+          .col-md-6
+            a(href='./images/nico-marks-real.jpg', data-toggle='lightbox')
+              img.img-fluid(src='./images/nico-marks-real.jpg', alt='')
+        .row.mt-3
+          .col-md-6
+            a(href='./images/eddy-lackmann.jpg', data-toggle='lightbox')
+              img.img-fluid(src='./images/eddy-lackmann.jpg', alt='')
+          .col-md-6.align-self-center
+            h3 lorem ipsum
+            p
+              | Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione obcaecati pariatur, cumque voluptate quis iste velit! A accusantium quibusdam nesciunt.
+            a.btn.btn-danger.btn-lg.my-1(href='#') Learn More
+        .row.mt-3
+          .col-md-6.align-self-center
+            h3 lorem ipsum
+            p
+              | Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione obcaecati pariatur, cumque voluptate quis iste velit! A accusantium quibusdam nesciunt.
+            a.btn.btn-danger.btn-lg.my-1(href='#') Learn More
+          .col-md-6
+            a(href='./images/fingers.jpg', data-toggle='lightbox')
+              img.img-fluid(src='./images/fingers.jpg', alt='')
+    section#news-letter.text-center.p-5.bg-dark.text-white
+      .container
+        .row
+          .col
+            h1 Sign up for news letter
+            p
+              | Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure, reprehenderit? Voluptatem, dolores quis. Assumenda maiores facilis deleniti hic commodi expedita atque aut id ipsa amet beatae, quaerat doloribus. Aut, nisi!
+            form.form-inline.justify-content-center(method='POST')
+              input.form-control.mb-2.mr-2(type='text', placeholder='Enter Name')
+              input.form-control.mb-2.mr-2(type='email', placeholder='Enter Email')
+              button.btn.btn-primary.mb-2 Submit
+    include partials/footer

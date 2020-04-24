@@ -1,0 +1,41 @@
+extends layout2
+
+block content
+ header#main-header.py-2.bg-warning.text-white
+      .container
+        .row
+          .col-md-6
+            h1
+              i.fa.fa-users
+              |  Users
+ section#actions.py-4.mb-4.bg-light
+      .container
+        .row
+          .col-md-6.ml-auto
+            .input-group
+              input.form-control(type='text', placeholder='Search')
+              span.input-group-btn
+                button.btn.btn-warning Search
+ section#post
+      .container
+        .row
+          .col
+            .card.my-4
+              .card-header
+                h4 Latest Users
+              table.table.table-striped
+                thead.thead-dark
+                  tr
+                    th #
+                    th Name
+                    th Email
+                tbody
+                  tr
+                    td(scope='row') 1
+                    td John Doe
+                    td Jdoe@gmail.com
+                  tr
+                    td(scope='row') 2
+                    td Tech Man
+                    td Tech@hotmail.com
+ include partials/footer

@@ -1,0 +1,34 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    script(src='https://kit.fontawesome.com/1946a965ff.js', crossorigin='anonymous')
+    link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css', integrity='sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh', crossorigin='anonymous')
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css', integrity='sha256-HAaDW5o2+LelybUhfuk0Zh2Vdk8Y2W2UeKmbaXhalfA=', crossorigin='anonymous')
+    link(rel='stylesheet', href='css/style.css')
+    title= title
+  body
+    // Start Here
+    nav.navbar.navbar-expand-sm.navbar-dark.bg-dark
+      .container
+        img.img-fluid(src='./images/Ice_Cream.png', alt='', width='50px', height='50px')
+        a.navbar-brand(href='/') YUM
+        button.navbar-toggler(data-toggle='collapse', data-target='#navbarCollapse')
+          span.navbar-toggler-icon
+        #navbarCollapse.collapse.navbar-collapse
+          ul.navbar-nav.ml-auto
+            li.nav-item
+              a.nav-link(href='sign-up.html') Login
+            li.nav-item.active
+              a.nav-link(href='/blog-post') Blog
+            li.nav-item
+              a.nav-link(href='/dashboard') Dashboard
+            li.nav-item
+              a.nav-link(href='/post') Posts
+            li.nav-item
+              a.nav-link(href='/categories') Categories
+            li.nav-item
+              a.nav-link(href='/users') Users
+    // Page Header
+    block content
