@@ -8,7 +8,7 @@ module.exports = router;
 // posts
 router.get("/post/delete/:id", function (req, res) {
   let postId = req.params.id;
-
+  
   posts = posts.filter(p => p.id !== postId);
 
   res.redirect(req.baseUrl + '/post');

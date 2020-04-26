@@ -10,7 +10,7 @@ app.set("view engine", "pug");
 app.use(express.static("public"));
 app.use('/jquery', express.static(__dirname + '/node_modules/jquery/dist/'));
 app.use(express.static(__dirname + '/node_modules/bootstrap/dist'));
-app.use(favicon(__dirname + '/public/favicon.png'));
+app.use(favicon(__dirname + '/public/favicon.ico'));
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get("/", function (req, res) {
@@ -20,11 +20,11 @@ app.get("/", function (req, res) {
 const readRouter = require("./read");
 app.use(readRouter);
 
-const deleteRouter = require("./delete");
-app.use(deleteRouter);
-
 const createRouter = require("./create");
 app.use(createRouter);
+
+const deleteRouter = require("./delete");
+app.use(deleteRouter);
 
 const updateRouter = require("./update");
 app.use(updateRouter);
