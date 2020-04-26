@@ -8,11 +8,10 @@ block content
             h1
               i.fa.fa-pencil
               |  Post
-
-  section.actions.py-4.mb-4.bg-light
+  section#actions.py-4.mb-4.bg-light
       .container
         .row
-          .col-md-3
+          .col-md-3.mb-3
             a.btn.btn-primary.btn-block(href='#', data-toggle='modal', data-target='#addPost')
               i.fas.fa-plus
               |  Add Post
@@ -21,6 +20,30 @@ block content
               input.form-control(type='text', placeholder='Search')
               span.input-group-btn
                 button.btn.btn-primary Search
+  #addPost.modal.fade
+      .modal-dialog.modal-lg
+        .modal-content
+          .modal-header.bg-primary.text-white
+            h1.modal-title
+              i.fa.fa-pencil
+              |  Add Post
+            button.close(data-dismiss='modal')
+              span ×
+          .modal-body
+            form(method="post")
+              .form-group
+                label(for='title') Title
+                input.form-control(name="title" type='text')
+              .form-group
+                label(for='image') Upload Image
+                .custom-file
+                  input#image.custom-file-input(type='file')
+                  label.custom-file-label(for='image') Choose file
+                small.form-text.text-muted Max Size 5mb
+              .form-group
+                label(for='body') Body
+                textarea.form-control(name='editor1')
+                button.btn.btn-primary.mt-2(type="submit") Save Changes
   section#action.py-4.mb-4.bg-light
       .container
         .row
@@ -33,39 +56,19 @@ block content
                   tr
                     th Title
                     th Date Posted
-                    th Edit
+                    th 
+                    th 
                 tbody
                   each post in posts
                     tr
                       td= post.title
                       td July 12, 2019
                       td
-                        a.btn.btn-secondary(href='/details')
+                        a.btn.btn-secondary(href=`post/edit/${post.id}`)
                           i.fa.fa-angle-double-right
                           |  Edit
-  #addPost.modal.fade
-  .modal-dialog.modal-lg
-    .modal-content
-      .modal-header.bg-primary.text-white
-        h1.modal-title
-          i.fa.fa-pencil
-          |  Add Post
-        button.close(data-dismiss='modal')
-          span ×
-      .modal-body
-        form(method="post")
-          .form-group
-            label(for='title') Title
-            input.form-control(name="name", type='text', placeholder=" Name your post")
-          .form-group
-            label(for='image') Upload Image
-            .custom-file
-              input#image.custom-file-input(type='file')
-              label.custom-file-label(for='image') Choose file
-            small.form-text.text-muted Max Size 5mb
-          .form-group
-            label(for='body') Body
-            textarea.form-control(name='editor1', type="text")
-            hr
-            button.btn.btn-primary(type="submit") Save Changes                        
+                      td
+                        a.btn.btn-secondary(href=`post/delete/${post.id}`)
+                          i.fa.fa-remove
+                          |  Delete                            
   include partials/footer2

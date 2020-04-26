@@ -21,18 +21,11 @@ block content
           .col
             .card
               .card-header
-                h4 Edit Post
+                h4 Edit User
               .card-body
                 form(method="post")
                   .form-group
-                    label(for='title') Title
-                    input.form-control(name="title", type='text', value=`${post.title}`)
-                  .form-group
-                    label(for='file') Image Upload
-                    input.form-control-file(type='file')
-                    small.form-test.text-muted Max Size 3MB
-                  .form-group
-                    label(for='message') Body
-                    textarea.form-control(name='editor1')
-                    button.btn.btn-info.mt-2(type="submit") Save Changes
+                    label(for='room') Title
+                    input.form-control(name="room", type='text', placeholder='Enter a title' value=`${category.room}`)
+                    button.btn.btn-danger.mt-2(type="submit") Save Changes
  include partials/footer2
