@@ -12,23 +12,28 @@ body {
   border-left: #444 3px solid;
 }
 
+.topNav {
+  background: #07070A;
+}
+
 .carousel-item {
   height: 450px;
 }
 
 .carousel-image-1 {
-  background: url('../images/clem-onojeg.jpg') no-repeat center;
+  background:linear-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, .5)), url('../images/clem-onojeg.jpg') no-repeat center;
   background-size: cover;
 }
 
 .carousel-image-2 {
-  background: url('../images/jc-gellidon.jpg') no-repeat center;
+  background:linear-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, .5)), url('../images/jc-gellidon.jpg') no-repeat center;
   background-size: cover;
 }
 
 .carousel-image-3 {
-  background: url('../images/woman.jpg') no-repeat center;
+  background:linear-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, .5)), url('../images/woman.jpg') no-repeat center;
   background-size: cover;
+  
 }
 
 #home-heading {
@@ -46,7 +51,7 @@ body {
   border-radius: 20px;
   text-align: center;
   letter-spacing: 1px;
-  background: url('../images/daniel-von-appen.jpg') no-repeat center;
+  background:linear-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, .2)), url('../images/daniel-olah-pCcGpVsOHoo-unsplash.jpg') no-repeat center;
   color: #fff;
 }
 
@@ -61,8 +66,12 @@ body {
 
 #main-footer {
   font-size: 20px;
-  background: url("../images/bryan-garces-bggxzFbRexc-unsplash.jpg") no-repeat center;
+  background: url("../images/farouk-mechedal-iWmfPbKmxEQ-unsplash.jpg") no-repeat center;
   background-size: cover;
+}
+
+#news-letter{
+  background: #07070A;
 }
 
 #page-header {

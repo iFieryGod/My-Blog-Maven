@@ -9,7 +9,7 @@ app.set("view engine", "pug");
 
 app.use(express.static("public"));
 app.use('/jquery', express.static(__dirname + '/node_modules/jquery/dist/'));
-app.use(express.static(__dirname + '/node_modules/bootstrap/dist'));
+app.use('/bootstrap', express.static(__dirname + '/node_modules/bootstrap/dist'));
 app.use(favicon(__dirname + '/public/favicon.ico'));
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -49,6 +49,6 @@ app.get("/settings", function (req, res) {
   res.render("settings", { title: "Settings"})
 });
 
-app.listen(3000, function () {
-  console.log("Blog is listening on port 3000!")
+app.listen(5000, function () {
+  console.log("Blog is listening on port 5000!")
 });
