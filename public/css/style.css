@@ -66,12 +66,12 @@ body {
 
 #main-footer {
   font-size: 20px;
-  background: url("../images/farouk-mechedal-iWmfPbKmxEQ-unsplash.jpg") no-repeat center;
-  background-size: cover;
+  background: url("../images/adam-birkett-YkXdt3429hc-unsplash.jpg") no-repeat center;
+  background-size: auto;
 }
 
 #news-letter{
-  background: #07070A;
+  background: rgba(0, 0, 0, 0.733);
 }
 
 #page-header {
@@ -89,4 +89,16 @@ body {
 
 .text-muted {
   padding-left: 5px;
+}
+
+.edit-page-color {
+  background-color: #EF959C;
+}
+@media(max-width: 500px){
+  .blog-post-messages{
+    order: 2;
+  }
+  .blog-pictures-right{
+    order: 1;
+  }
 }

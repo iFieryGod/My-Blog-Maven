@@ -1,7 +1,7 @@
 extends layout2
 
 block content
- header#main-header.py-2.bg-info.text-white
+ header#main-header.py-2.edit-page-color.text-white
       .container
         .row
           .col-md-6
@@ -12,10 +12,10 @@ block content
       .container
         .row
           .col-md-3.mr-auto
-            a.btn.btn-primary.btn-info(href='/dashboard')
+            a.btn.text-white.edit-page-color(href='/category')
               i.fa.fa-arrow-left
-              |  Back To Dashboard
- section#post
+              |  Back To Category
+ section#post.mb-3
       .container
         .row
           .col
@@ -27,5 +27,5 @@ block content
                   .form-group
                     label(for='room') Title
                     input.form-control(name="room", type='text', placeholder='Enter a title' value=`${category.room}`)
-                    button.btn.btn-danger.mt-2(type="submit") Save Changes
+                    button.btn.edit-page-color.text-white.mt-2(type="submit") Save Changes
  include partials/footer2

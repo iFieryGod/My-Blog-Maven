@@ -7,57 +7,5 @@ block content
           .col-md-6
             h1
               i.fa.fa-folder
-              |  Categories
-    section#actions.py-4.bg-light
-      .container
-        .row
-          .col-md-3.mb-3
-            a.btn.btn-danger.btn-block(href='#', data-toggle='modal', data-target='#addCategory')
-              i.fas.fa-plus
-              |  Add Category
-          .col-md-6.ml-auto
-            .input-group
-              input.form-control(type='text', placeholder='Search')
-              span.input-group-btn
-                button.btn.btn-danger Search
-    #addCategory.modal.fade
-      .modal-dialog.modal-lg
-        .modal-content
-          .modal-header.bg-danger.text-white
-            h1.modal-title Add Category
-            button.close(data-dismiss='modal')
-              span ×
-          .modal-body
-            form(method="post")
-              .form-group
-                label(for='title') Title
-                input.form-control(name="room", type='text', placeholder='Enter a title')
-                button.btn.btn-danger.mt-2(type="submit") Save Changes
-    section#actions.py-4.mb-4.bg-light
-      .container
-        .row
-          .col
-            .card
-              .card-header
-                h4 Latest Categories
-              table.table.table-striped
-                thead.thead-dark
-                  tr
-                    th Categories
-                    th Date Posted
-                    th
-                    th
-                tbody
-                  each category in categories
-                    tr
-                      td= category.room
-                      td July 12, 2017
-                      td
-                        a.btn.btn-secondary(href=`categories/edit/${category.id}`)
-                          i.fa.fa-angle-double-right
-                          |  Edit
-                      td
-                        a.btn.btn-secondary(href=`categories/delete/${category.id}`)
-                          i.fa.fa-remove
-                          |  Delete
+              |  Random Content
     include partials/footer

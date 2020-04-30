@@ -1,5 +1,4 @@
 const express = require("express");
-let categories = require("./data/categories.json");
 let posts = require("./data/posts.json");
 let users = require("./data/users.json");
 const _ = require("lodash");
@@ -30,30 +29,6 @@ router.post("/post/edit/:id", function (req, res) {
   post.title = req.body.title;
   
   res.redirect("/post");
-});
-
-// Categories
-router.get("/categories/edit/:id", function (req, res) {
-  let categoryId = req.params.id;
-  let category = _.find(categories, c => c.id === categoryId);
-  if(!category) {
-    res.sendStatus(404);
-    return; 
-  }
-  res.render('editCategory', { category });
-});
-
-router.post("/categories/edit/:id", function (req, res) {
-  let categoryId = req.params.id;
-  let category = _.find(categories, c => c.id === categoryId);
-  if(!category) {
-    res.sendStatus(404);
-    return; 
-  }
-
-  category.room = req.body.room;
-  
-  res.redirect("/categories"); 
 });
 
 // Users

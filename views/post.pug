@@ -8,7 +8,7 @@ block content
             h1
               i.fa.fa-pencil
               |  Post
-  section#actions.py-4.mb-4.bg-light
+  section#actions.py-4.mb-4
       .container
         .row
           .col-md-3.mb-3
@@ -44,14 +44,14 @@ block content
                 label(for='body') Body
                 textarea.form-control(name='editor1')
                 button.btn.btn-primary.mt-2(type="submit") Save Changes
-  section#action.py-4.mb-4.bg-light
+  section#action.py-4.mb-4
       .container
         .row
           .col
             .card
               .card-header
                 h4 Latest Post
-              table.table.table-striped
+              table.table.table-striped.table-hover
                 thead.thead-dark
                   tr
                     th Title
@@ -71,4 +71,4 @@ block content
                         a.btn.btn-secondary(href=`post/delete/${post.id}`)
                           i.fa.fa-remove
                           |  Delete                            
-  include partials/footer2
+  include partials/footer

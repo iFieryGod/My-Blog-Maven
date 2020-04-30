@@ -12,15 +12,15 @@ block content
       .container
         .row
           .col-md-3.mr-auto
-            a.btn.btn-primary.btn-light(href='/dashboard')
+            a.btn.btn-primary.btn-primary.mb-3(href='/blog-post')
               i.fa.fa-arrow-left
-              |  Back to Dashboard
+              |  Back to Blog
           .col-md-3.mr-auto
-            a.btn.btn-success.btn-block(href='#', data-toggle='modal', data-target='#passwordModal')
+            a.btn.btn-warning.btn-block.mb-3.text-white(href='#', data-toggle='modal', data-target='#passwordModal')
               i.fa.fa-lock
               |  Change Password
           .col-md-3.mr-auto
-            a.btn.btn-danger.btn-block(href='#')
+            a.btn.btn-danger.btn-block.mb-3(href='#')
               i.fa.fa-remove
               |  Delete Account
  section#profile.mb-3
@@ -43,8 +43,8 @@ block content
                     textarea.form-control(name='editor1', style='visibility: hidden; display: none;')
                       | Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel aliquam voluptatem quidem ullam rem aliquid. Doloribus saepe ab rem iste voluptate, iure repellat error dolorum non asperiores, nam laborum dolor?
           .col-md-3
-            h3 Your Avatar
-            img.d-block.img-fluid.mb-3(src='./images/avatar.png', alt='avatar')
+            h3.text-center Your Avatar
+            img.d-block.img-fluid.mb-3.ml-auto.mr-auto(src='./images/avatar.png', alt='avatar')
             button.btn.btn-primary.btn-block Edit Image
             button.btn.btn-danger.btn-block Delete Image
  include partials/footer2

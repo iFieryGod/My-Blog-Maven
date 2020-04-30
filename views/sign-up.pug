@@ -8,34 +8,20 @@ html(lang='en')
     link(href='https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap', rel='stylesheet')
     title Yum Fashion
   body
-    .container
+    .container-signUp
       .banner
         h1.banner-heading JOIN THE YUMMY COMMUNITY
         .arrow
           i.fas.fa-arrow-down
         button.banner-btn Click Now
-      .form-container
-        form.sign-up-form
-          input.form-input(type='text', placeholder='Full Name')
-          input.form-input(type='email', placeholder='Email Address')
-          button#signUp(type='button') Sign Up Here
-          #direct.tour
-            i.right-arrow.fas.fa-arrow-right
-            a.start(href='/') Start Tour
-        .header
-          h1 Browse Our Yummy Catalog
-          #direct2.tour
-            i.right-arrow.fas.fa-arrow-right
-            a.start(href='/') Start Tour
-        .x-btn ✕
       .form-container-of-signup
         .header-of-signup
           h1 Get Access To Exclusive Content
         .x-btn-sign-up ✕
-        form.sign-up-form
-          input.form-input(type='text', placeholder='First Name')
-          input.form-input(type='text', placeholder='Last Name')
-          input.form-input(type='email', placeholder='Email Address')
-          input.form-input(type='password', placeholder='Password')
-          button(type='button') Submit
+        form.sign-up-form(method="post")
+          input.form-input(name="firstName", type='text', placeholder='First Name')
+          input.form-input(name="lastName", type='text', placeholder='Last Name')
+          input.form-input(name="emailAddress", type='email', placeholder='Email Address')
+          input.form-input(name="password", type='password', placeholder='Password')
+          button(type='submit') Submit
     script(src='./js/app.js')

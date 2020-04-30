@@ -1,5 +1,4 @@
 const express = require("express");
-let categories = require("./data/categories.json");
 let posts = require("./data/posts.json");
 let users = require("./data/users.json");
 const uuid = require("uuid");
@@ -19,18 +18,7 @@ router.post("/post", function (req, res) {
 
   res.redirect("/post");
 });
-// Categories
-router.post("/categories", function (req, res) {
-  
-  let category = {
-    room: req.body.room,
-    id: uuid.v4()
-  };
 
-  categories.push(category);
-  
-  res.redirect("/categories")
-});
 // Users
 router.post("/users", function (req, res) {
   

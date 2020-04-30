@@ -49,33 +49,42 @@ block content
       .container
         h1#post-heading.py-3.display-4.text-white.font-weight-bold See the Latest Post
         .row
-          .col-md-6.align-self-center
+          .col-md-6.align-self-center.blog-post-messages
             h2 Drip Dungeons
+            small.text-muted - Date posted
             p.text-justify
               | "This is the kind of fashion i grew up on - a good pair of trainers, great denim - and i will always love high-end-streetwear."
-              blockquote - Nelson Wills 
+              blockquote
+              small.text-muted Author:
+              |   Nelson Wills
             a.btn.btn-danger.btn-lg.my-1(href='#') Read More
-          .col-md-6
+          .col-md-6.blog-pictures-right
             a(href='./images/nico-marks-real.jpg', data-toggle='lightbox')
               img.img-fluid(src='./images/nico-marks-real.jpg', alt='')
         .row.mt-3
-          .col-md-6
+          .col-md-6#blog-pictures-left
             a(href='./images/eddy-lackmann.jpg', data-toggle='lightbox')
               img.img-fluid(src='./images/eddy-lackmann.jpg', alt='')
           .col-md-6.align-self-center
             h3 Nike Quote
+            small.text-muted - Date posted
             p.text-justify
               | "I firmly believe that with the right footwear one can rule the world.""
-              blockquote - Chris Edwards
+              blockquote
+              small.text-muted Author:
+              |  Chris Edwards
             a.btn.btn-danger.btn-lg.my-1(href='#') Read More
         .row.mt-3
-          .col-md-6.align-self-center
+          .col-md-6.align-self-center.blog-post-messages
             h3 Swing Terror
+            small.text-muted - Date posted
             p.text-justify
               | "Don't be into trends. Don't make fashion own you, but you decide what you are, what you want to express by the way you dress and the way to live."
-              blockquote - Kylie Swing
+              blockquote
+              small.text-muted Author:
+              |  Kylie Swing
             a.btn.btn-danger.btn-lg.my-1(href='#') Learn More
-          .col-md-6
+          .col-md-6.blog-pictures-right
             a(href='./images/sin-flow.jpg', data-toggle='lightbox')
               img.img-fluid(src='./images/sin-flow.jpg', alt='')
     section#news-letter.text-center.p-5.text-white

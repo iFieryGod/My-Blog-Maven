@@ -3,11 +3,10 @@ html(lang='en')
   head
     meta(charset='UTF-8')
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
-    script(src='https://kit.fontawesome.com/1946a965ff.js')
     link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css', integrity='sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh', crossorigin='anonymous')
-    link(rel='stylesheet', href='/css/bootstrap.min.css')
-    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css', integrity='sha256-HAaDW5o2+LelybUhfuk0Zh2Vdk8Y2W2UeKmbaXhalfA=', crossorigin='anonymous')
+    link(rel='stylesheet', href='./css/intro.css')
     link(rel='stylesheet', href='/css/style.css')
+    link(rel='stylesheet', href='/css/bootstrap.min.css')
     title= title
   body
     // Start Here
@@ -18,15 +17,14 @@ html(lang='en')
         button.navbar-toggler(data-toggle='collapse', data-target='#navbarCollapse')
           span.navbar-toggler-icon
         #navbarCollapse.collapse.navbar-collapse
-          ul.nav.navbar-nav.ml-2
+          ul.navbar-nav.ml-auto
             li.nav-item.active
-              a.nav-link(href='/blog-post') Blog
-            li.nav-item
-              a.nav-link(href='/post') Posts
-            li.nav-item
-              a.nav-link(href='/users') Users
-          ul.nav.navbar-nav.ml-auto    
-            li.nav-item
-              a.nav-link(href='/logout') Log Out  
-    // Page Header
-    block content
+              a.nav-link(href='/sign-up') Sign Up 
+    .container-second
+      .banner-on-login
+        form.sign-up-form(action="/login", method="post")
+          input.form-input(name="username", type='text', placeholder='Username')
+          input.form-input(name="password", type='password', placeholder='Password')
+          button(type='submit') Log In
+          span#control
+    include partials/footer

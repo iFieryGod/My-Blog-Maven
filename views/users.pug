@@ -8,71 +8,37 @@ block content
             h1
               i.fa.fa-users
               |  Users
- section.actions.py-4.mb-4.bg-light
-      .container
-        .row
-          .col-md-3.mb-3
-            a.btn.btn-warning.btn-block.text-white(href='#', data-toggle='modal', data-target='#addUser')
-              i.fas.fa-plus
-              |  Add User
-          .col-md-6.ml-auto
-            .input-group
-              input.form-control(type='text', placeholder='Search')
-              span.input-group-btn
-              button.btn.btn-warning.text-white Search
- #addUser.modal.fade
-      .modal-dialog.modal-lg
-        .modal-content
-          .modal-header.bg-warning.text-white
-            h1.modal-title Add User
-            button.close(data-dismiss='modal')
-              span ×
-          .modal-body
-            form(method="post")
-              .form-group
-                label(for='name') Name
-                input.form-control(name="name" type='text')
-              .form-group
-                label(for='lastName') Surname
-                input.form-control(name="lastName" type='text')
-              .form-group
-                label(for='email') Email
-                input.form-control(name="email" type='email')
-              .form-group
-                label(for='password') Password
-                input.form-control(type='password', name="password")
-              .form-group
-                label(for='password') Confirm Password
-                input.form-control(type='password', name="password")
-                button.btn.btn-info.mt-2(type="submit") Save Changes
- // Users
- section#post
+ section.actions.py-4
+ .col-md-6.ml-auto.mr-auto.mb-3
+  .input-group
+    input.form-control(type='text', placeholder='Search')
+    span.input-group-btn
+    button.btn.btn-warning.text-white Search
+ section#action.py-4.mb-4
       .container
         .row
           .col
-            .card.my-4
+            .card
               .card-header
-                h4 Latest Users
-              table.table.table-striped
+                h4 Latest Post
+              table.table.table-striped.table-hover.small
                 thead.thead-dark
                   tr
-                    th #
-                    th Name
-                    th Email
-                    th
-                    th
+                    th(scope='col') First Name
+                    th(scope='col') Email Address
+                    th(scope='col') 
+                    th(scope='col') 
                 tbody
                   each user, index in users
                     tr
-                      td= index+1
                       td= user.firstName
                       td= user.emailAddress
                       td
-                        a.btn.btn-secondary(href=`users/edit/${user.id}`)
+                        a.btn.btn-secondary(href=`post/edit/${user.id}`)
                           i.fa.fa-angle-double-right
                           |  Edit
                       td
-                        a.btn.btn-secondary(href=`users/delete/${user.id}`)
+                        a.btn.btn-secondary(href=`post/delete/${user.id}`)
                           i.fa.fa-remove
                           |  Delete
  include partials/footer
